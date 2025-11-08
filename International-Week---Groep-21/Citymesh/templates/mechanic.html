@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+   <meta charset="UTF-8">
+   <title>CityMesh Drone Dashboard</title>
+   <link rel="stylesheet" href="../static/css/styles.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+</head>
+
+<body>
+   <header class="top-bar">
+      <span class="logo">CityMesh Drones</span>
+      <button class="logout-button" onclick="window.location.href='/'">Uitloggen</button>
+      <link rel="icon" href="../static/css/img/drone.png" type="image/png">
+
+   </header>
+
+   <main class="layout">
+   <section class="mechanic-dashboard">
+      <div class="report-section" id="mechanicReports">
+         <h2>Mijn Verslagen</h2>
+         <input type="text" id="searchInput" placeholder="Zoek een verslag...">
+         <div id="mechanicReportList"></div>
+         <div id="navigationButtons">
+            <button id="prevBtn">Vorige</button>
+            <button id="nextBtn">Volgende</button>
+            <span id="verslagCounter"></span>
+         </div>
+      </div>
+   </section>
+</main>
+
+   <footer>
+      &copy; 2025 CityMesh | <a href="#">Contact</a> | <a href="#">Algemene Voorwaarden</a>
+   </footer>
+
+   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+   <script src="../js/mechanic.js"></script>
+</body>
+
+</html>

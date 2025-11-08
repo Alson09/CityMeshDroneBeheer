@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+   <meta charset="UTF-8">
+   <title>CityMesh Drone Dashboard</title>
+   <link rel="stylesheet" href="../static/css/styles.css">
+   <link rel="icon" href="../static/css/img/drone.png" type="image/png">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+</head>
+
+<body>
+   <header class="top-bar">
+      <span class="logo">CityMesh Drones</span>
+      <button class="logout-button" onclick="window.location.href='/'">Uitloggen</button>
+   </header>
+   <main class="layout">
+      <div class="dashboard-grid">
+         <section class="map-section">
+            <h2>Droneplatformen in België</h2>
+            <div id="map"></div>
+         </section>
+   
+         <div class="side-panel">
+            <aside class="info-panel" id="infoPanel">
+               <h3>Platform Info</h3>
+               <p><strong>Locatie:</strong> <span id="infoLocatie">-</span></p>
+               <div id="droneList"></div>
+            </aside>
+   
+            <section class="report-section" id="reportSection">
+               <h2>Verslag Indienen</h2>
+               <form id="reportForm">
+                  <label for="droneId">Drone ID:</label>
+                  <input type="text" id="droneId" required>
+                  <label for="reportDetails">Verslag Details:</label>
+                  <textarea id="reportDetails" rows="4" required></textarea>
+                  <button type="submit">Indienen</button>
+               </form>
+            </section>
+         </div>
+      </div>
+   </main>
+   <section class="notification-section" id="pilotNotifications">
+      <h2>Notificaties</h2>
+      <div id="pilotNotificationList"></div>
+   </section>
+
+   <footer>
+      &copy; 2025 CityMesh | <a href="#">Contact</a> | <a href="#">Algemene Voorwaarden</a>
+   </footer>
+
+   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+   <script src="../static/js/piloot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+   <meta charset="UTF-8">
+   <title>CityMesh Drone Dashboard</title>
+   <link rel="stylesheet" href="../css/styles.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+</head>
+
+<body>
+   <header class="top-bar">
+      <span class="logo">CityMesh Drones</span>
+      <input type="text" placeholder="Zoek...">
+   </header>
+
+   <nav class="nav-bar">
+      <button type="button" class="pilot-tab">Piloot</button>
+      <button type="button" class="admin-tab">Admin</button>
+      <button type="button" class="mechanic-tab">Mechanieker</button>
+   </nav>
+
+   <main class="layout">
+      <section class="pilot-dashboard hidden">
+         <section class="map-section">
+            <h2>Droneplatformen in België</h2>
+            <div id="map"></div>
+         </section>
+         <aside class="info-panel hidden" id="infoPanel">
+            <h3>Platform Info</h3>
+            <p><strong>Locatie:</strong> <span id="infoLocatie">-</span></p>
+            <div id="droneList"></div>
+         </aside>
+         <section class="report-section" id="reportSection">
+            <h2>Verslag Indienen</h2>
+            <form id="reportForm">
+               <label for="droneId">Drone ID:</label>
+               <input type="text" id="droneId" required>
+               <label for="reportDetails">Verslag Details:</label>
+               <textarea id="reportDetails" rows="4" required></textarea>
+               <br>
+               <label for="needsRepair">Probleem / Reparatie nodig:</label>
+               <input type="checkbox" id="needsRepair">
+               <br>
+               <button type="submit">Indienen</button>
+            </form>
+         </section>
+         <section class="notification-section" id="pilotNotifications">
+            <h2>Notificaties</h2>
+            <div id="pilotNotificationList"></div>
+         </section>
+      </section>
+
+      <section class="admin-dashboard hidden">
+         <section class="notification-section" id="adminNotifications">
+            <h2>Notificaties</h2>
+            <div id="adminNotificationList"></div>
+         </section>
+         <section class="reservation-section hidden" id="reservationSection">
+            <h2>Reserveringsaanvragen</h2>
+            <div id="reservationList"></div>
+         </section>
+      </section>
+
+      <section class="mechanic-dashboard hidden">
+         <section class="notification-section" id="mechanicNotifications">
+            <h2>Notificaties</h2>
+            <div id="mechanicNotificationList"></div>
+         </section>
+      </section>
+   </main>
+
+   <footer>
+      &copy; 2025 CityMesh | <a href="#">Contact</a> | <a href="#">Algemene Voorwaarden</a>
+   </footer>
+
+   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+   <script src="../script.js"></script>
+</body>
+
+</html>

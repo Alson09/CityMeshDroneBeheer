@@ -1,0 +1,93 @@
+body {
+    background-image: url('../css/img/pexels-jeshoots-com-147458-442587.jpg');
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-size: 100%;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    backdrop-filter: blur(20px); 
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 100px auto;
+    padding: 30px 40px;
+    text-align: center;
+    width: 350px;
+  }
+  
+  h2 {
+    color: #006666;
+    margin-bottom: 25px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 8px;
+  }
+  
+  .checkbox {
+    align-items: center;
+    color: white;
+    display: flex;
+    margin-bottom: 20px;
+
+  }
+  
+  .checkbox input {
+    margin-right: 5px;
+  }
+  
+  button {
+    background-color: #3399aa;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  button:hover {
+    background-color: #2b8997;
+  }
+  
+  .register-link {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  .register-link a {
+    border-radius: 3px;
+    color: white;
+    margin-left: 5px;
+    padding: 4px 8px;
+  }
+
+  .top-bar {
+    font-size: 50px;
+    justify-content: space-between;
+    padding: 30px 40px;
+    text-align: center;
+}
